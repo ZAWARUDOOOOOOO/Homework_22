@@ -1,0 +1,21 @@
+create table "book"(
+    bookname    text not null,
+    releasedate date not null,
+    author      name not null,
+    genre       text not null,
+    cost        int  not null
+);
+
+create table "author"(
+    borndate    date not null,
+    deathdate   date,
+    nationality text not null,
+    bookscount  int  not null
+);
+
+create table "order"(
+    id          serial,
+    author      text not null,
+    book        text not null,
+    cost        int  not null
+);
